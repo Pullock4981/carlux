@@ -11,7 +11,7 @@ const ErrorMessage = ({ error }) => {
                 <p className="text-gray-400 mb-6">{error || "We couldn't load the inventory. Please try again later."}</p>
                 <button
                     onClick={() => window.location.reload()}
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-red-500 hover:bg-red-600 text-white font-bold rounded-xl transition-all shadow-lg shadow-red-500/20"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-[linear-gradient(135deg,#4c1d95_0%,#9b1a37_100%)] hover:bg-[linear-gradient(135deg,#9b1a37_0%,#4c1d95_100%)] text-white font-bold rounded-xl transition-all shadow-lg shadow-purple-500/20 cursor-pointer"
                 >
                     <RefreshCcw className="w-4 h-4" />
                     Retry Connection

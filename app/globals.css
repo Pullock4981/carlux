@@ -1,20 +1,35 @@
 @import "tailwindcss";
 
 :root {
-  --background: #222828;
+  --background: #0a0a0a;
   --foreground: #ffffff;
-  --card-bg: #424141;
-  --accent-teal: #0B785E;
-  --accent-burgundy: #9B1A37;
-  --text-caboose: #A8A2A1;
-  --border-homebush: #72706A;
+  --brand-burgundy: #9B1A37;
+  --brand-pink: #D81B60;
+  --brand-purple: #701a75;
+  --brand-deep: #2e1065;
+  --card-bg: rgba(26, 26, 26, 0.8);
+  --grid-color: rgba(255, 255, 255, 0.05);
+  --proxima-gradient: linear-gradient(135deg, #4c1d95 0%, #9013fe 100%);
+}
+
+.bg-proxima-gradient {
+  background: linear-gradient(135deg, #4c1d95 0%, #9b1a37 100%);
+}
+
+.bg-proxima-gradient-hover {
+  background: linear-gradient(135deg, #9b1a37 0%, #4c1d95 100%);
 }
 
 body {
   background-color: var(--background);
+  background-image:
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+  background-size: 40px 40px;
   color: var(--foreground);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
 }
 
 * {
@@ -25,4 +40,5 @@ body {
 
 html {
   color-scheme: dark;
+  scroll-behavior: smooth;
 }
