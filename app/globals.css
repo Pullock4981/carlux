@@ -20,6 +20,11 @@
   background: linear-gradient(135deg, #9b1a37 0%, #4c1d95 100%);
 }
 
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--background);
   background-image:
@@ -32,13 +37,52 @@ body {
   min-height: 100vh;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+/* =============================================
+   UTILITY OVERRIDES — runs after Tailwind base
+   ============================================= */
+@layer utilities {
+
+  /* Ensure spacing utilities are never blocked */
+  .p-0 {
+    padding: 0 !important;
+  }
 }
 
-html {
-  color-scheme: dark;
-  scroll-behavior: smooth;
+/* Navbar layout */
+.navbar-inner {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .navbar-inner {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar-inner {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+.navbar-links {
+  flex: 1;
+  justify-content: center;
+  gap: 2rem;
+  white-space: nowrap;
+}
+
+@media (min-width: 1024px) {
+  .navbar-links {
+    gap: 2.5rem;
+  }
 }

@@ -2,7 +2,7 @@
 
 const SkeletonLoader = () => {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-7xl mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
             {[...Array(6)].map((_, i) => (
                 <div key={i} className="bg-[#1a1a1a]/80 border border-white/5 rounded-2xl overflow-hidden animate-pulse">
                     <div className="aspect-[16/10] bg-[#2a2a2a]" />
