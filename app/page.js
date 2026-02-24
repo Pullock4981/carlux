@@ -20,14 +20,15 @@ export default function Home() {
   } = useInventory();
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white">
+    <div className="min-h-screen bg-[#222828] text-white">
       <Navbar />
 
       <main className="pt-20 flex flex-col items-center w-full">
         {/* Hero Section */}
         <section className="relative py-24 px-6 text-center overflow-hidden">
           {/* Background Gradient */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-full bg-blue-600/20 blur-[120px] -z-10 rounded-full" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-full bg-[#0B785E]/20 blur-[120px] -z-10 rounded-full" />
+          <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#9B1A37]/10 blur-[100px] -z-10 rounded-full" />
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -36,9 +37,9 @@ export default function Home() {
             className="max-w-4xl mx-auto"
           >
             <h1 className="text-5xl md:text-7xl font-black tracking-tight mb-6 uppercase italic">
-              Experience <span className="text-blue-500">Pure</span> Excellence
+              Experience <span className="text-[#0B785E]">Pure</span> Excellence
             </h1>
-            <p className="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-[#A8A2A1] mb-10 max-w-2xl mx-auto leading-relaxed">
               Discover the most exclusive vehicle inventory curated for those who demand more than just transportation.
             </p>
           </motion.div>
@@ -72,7 +73,7 @@ export default function Home() {
                   <p className="text-gray-500 text-xl">No vehicles found matching "{searchQuery}"</p>
                   <button
                     onClick={() => setSearchQuery("")}
-                    className="mt-4 text-blue-500 hover:text-blue-400 font-bold underline"
+                    className="mt-4 text-[#0B785E] hover:text-[#9B1A37] font-bold underline transition-colors"
                   >
                     Clear Search
                   </button>
@@ -84,7 +85,7 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="py-10 border-t border-white/5 text-center text-gray-600 text-xs uppercase tracking-widest font-bold">
+      <footer className="py-10 border-t border-[#72706A]/30 text-center text-[#A8A2A1] text-xs uppercase tracking-widest font-bold bg-[#222828]">
         <p>&copy; 2026 Proxima IT - Carlux Performance Division</p>
       </footer>
     </div>
