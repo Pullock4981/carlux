@@ -26,7 +26,7 @@ export default function Home() {
       <main className="flex flex-col items-center w-full min-h-screen">
         {/* Content Section */}
         <div
-          className="w-full max-w-7xl mx-auto flex flex-col"
+          className="w-full max-w-[1600px] mx-auto flex flex-col"
           style={{
             paddingTop: "2rem",
             paddingBottom: "4rem",
@@ -50,7 +50,7 @@ export default function Home() {
             ) : (
               <>
                 {products.length > 0 ? (
-                  <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3" style={{ gap: "1.5rem" }}>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4" style={{ gap: "1.5rem" }}>
                     {products.map((car) => (
                       <CarCard key={car.id} car={car} />
                     ))}

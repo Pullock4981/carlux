@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 const useIsMobile = () => {
     const [isMobile, setIsMobile] = useState(false);
@@ -38,9 +39,10 @@ const CarCard = ({ car }) => {
                 borderRadius: "1.25rem",
                 overflow: "hidden",
                 transition: "transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease",
-                cursor: "pointer",
+                cursor: "default",
                 position: "relative",
             }}
+            onClick={() => window.location.href = `/cars/${car.id}`}
             onMouseEnter={(e) => {
                 e.currentTarget.style.transform = "translateY(-6px)";
                 e.currentTarget.style.boxShadow = "0 24px 60px rgba(216,27,96,0.12), 0 8px 24px rgba(0,0,0,0.4)";
@@ -241,9 +243,13 @@ const CarCard = ({ car }) => {
                         </div>
                     </div>
 
-                    {/* CTA Button */}
-                    <button
+                    {/* CTA Link */}
+                    <Link
+                        href={`/cars/${car.id}`}
                         style={{
+                            display: "inline-flex",
+                            alignItems: "center",
+                            justifyContent: "center",
                             background: "linear-gradient(135deg, #4c1d95 0%, #9b1a37 100%)",
                             color: "#ffffff",
                             border: "none",
@@ -257,6 +263,7 @@ const CarCard = ({ car }) => {
                             whiteSpace: "nowrap",
                             transition: "opacity 0.2s ease, transform 0.2s ease",
                             boxShadow: "0 0 20px rgba(155,26,55,0.25)",
+                            textDecoration: "none"
                         }}
                         onMouseEnter={(e) => {
                             e.currentTarget.style.opacity = "0.85";
@@ -268,7 +275,7 @@ const CarCard = ({ car }) => {
                         }}
                     >
                         View Details
-                    </button>
+                    </Link>
                 </div>
 
                 {/* Stock indicator */}
