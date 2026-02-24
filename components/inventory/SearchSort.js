@@ -4,7 +4,7 @@ import { Search, ChevronDown } from 'lucide-react';
 
 const SearchSort = ({ searchQuery, setSearchQuery, sortOrder, setSortOrder }) => {
     return (
-        <div className="flex flex-col md:flex-row gap-4 mb-12 items-center justify-between w-full max-w-7xl mx-auto px-4">
+        <div className="flex flex-col md:flex-row gap-6 mb-12 items-center justify-center w-full max-w-7xl mx-auto px-4">
             {/* Search Bar */}
             <div className="relative w-full md:max-w-md group">
                 <div className="absolute inset-y-0 left-4 flex items-center pointer-events-none">

@@ -23,7 +23,7 @@ export default function Home() {
     <div className="min-h-screen bg-[#0a0a0a] text-white">
       <Navbar />
 
-      <main className="pt-20">
+      <main className="pt-20 flex flex-col items-center w-full">
         {/* Hero Section */}
         <section className="relative py-24 px-6 text-center overflow-hidden">
           {/* Background Gradient */}
@@ -45,7 +45,7 @@ export default function Home() {
         </section>
 
         {/* Filters & Grid Container */}
-        <section className="pb-32">
+        <section className="pb-32 w-full flex flex-col items-center">
           <SearchSort
             searchQuery={searchQuery}
             setSearchQuery={setSearchQuery}
@@ -58,7 +58,7 @@ export default function Home() {
           ) : error ? (
             <ErrorMessage error={error} />
           ) : (
-            <div className="max-w-7xl mx-auto px-4">
+            <div className="max-w-7xl w-full mx-auto px-4">
               {products.length > 0 ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   <AnimatePresence mode="popLayout">
